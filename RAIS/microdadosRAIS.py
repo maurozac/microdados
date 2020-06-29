@@ -37,7 +37,9 @@ import numpy as np
 import pandas as pd
 import wget
 import py7zr
+import requests
 import boto
+
 
 
 UFs = [
@@ -71,7 +73,7 @@ def baixar_raw(uf, ano, path_temp):
     archive.close()
     if len(extraidos) != 1:
         print('[!] Pacote 7z fora do padrão:', uf, ano)
-        return None, ano
+        return None
 
     os.remove(filename)
     print('[♫] Baixado e descompactado:', uf, ano)
@@ -146,6 +148,7 @@ def carregar_dados(path, ano, campos):
             )
 
     retirar = [_ for _ in frame.keys() if _ not in campos[ano].keys()]
+    # retirar.append("CBO Ocupação 2002")  # fix
 
     return frame.drop(columns=retirar)
 
@@ -153,6 +156,28 @@ def carregar_dados(path, ano, campos):
 # TESTE
 df = carregar_dados(path, ano, CAMPOS_RAIS)
 df.shape
+fulano = df.iloc[1234]  # para ver um fulano qquer
 
 
+def classes_CNAE(path_to_cnae=None):
+    """
+    docs:
+    https://servicodados.ibge.gov.br/api/docs/cnae?versao=2#api-Classes-classesGet
+    """
+    if not path_to_cnae:
+        url = "https://servicodados.ibge.gov.br/api/v2/cnae/classes"
+        cnaes = json.loads(requests.get(url).text)
+        with open(PATH_UTIL + "CNAEclasses.json", 'w', encoding='utf-8') as f:
+            json.dump(cnaes, f, ensure_ascii=False, indent=4)
+        return cnaes
+
+    f = open(path_to_cnae + "CNAEclasses.json")
+    cnaes = json.loads(f.read())
+    f.close()
+
+    return cnaes
+
+# TESTE
+cnaes = classes_CNAE(PATH_UTIL)  # com arquivo CNAEclasses.json salvo em PATH_UTIL
+cnaes = classes_CNAE()  # init => baixa e salva em PATH_UTIL
 
