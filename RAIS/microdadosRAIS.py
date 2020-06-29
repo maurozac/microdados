@@ -6,7 +6,7 @@ ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/
 
 PROJETO: Avaliação de Impactos da Infraestrura Aeroportuária | ITA & SAC
 
-Os arquivos de microdados podem ser grandes, acima de 10 GB  depois de descompactados.
+Os arquivos de microdados podem ser grandes, acima de 10 GB depois de descompactados.
 Assim, este pipeline está organizado da seguinte forma:
 . baixar localmente o arquivo .7z e descompactar em um diretório temporário
 . limpar dados
