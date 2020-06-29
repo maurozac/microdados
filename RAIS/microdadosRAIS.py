@@ -325,3 +325,33 @@ for uf in UFs:
     for ano in ANOS:
         pipeline_completo(uf, ano)
 
+
+"""
+Range das Escalas
+-----------------
+
+Escolaridade após 2005:
+1 "Analfabeto"
+2 "Ate 5a Incompleto"
+3 "5a Completo"
+4 "6a a 9a Incompleto"
+5 "9a Completo"
+6 "Medio Incompleto"
+7 "Medio Completo"
+8 "Superior Incompleto"
+9 "Superior Completo"
+10 "Mestrado"
+11 "Doutorado"
+
+Tamanho do Estabelecimento:
+0 "Zero"
+1 "Ate 4"
+2 "De 5 a 9"
+3 "De 10 a 19"
+4 "De 20 a 49"
+5 "De 50 a 99"
+6 "De 100 a 249"
+7 "De 250 a 499"
+8 "De 500 a 999"
+9 "1000 ou mais"
+"""
