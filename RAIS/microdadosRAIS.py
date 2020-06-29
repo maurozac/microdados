@@ -282,6 +282,8 @@ def pipeline_completo(uf, ano):
     lista_classes.sort()  # 673 classes [completo e ordenado]
 
     path = baixar_raw(uf, ano, PATH_TEMP)
+    if not path:
+        return None
     print('\n[♫] Baixado e descompactado:', uf, ano)
 
     df = carregar_dados(path, ano, CAMPOS_RAIS)
@@ -314,6 +316,12 @@ def pipeline_completo(uf, ano):
 
 
 # teste
-tabela_uf = pipeline_completo("AP", "2010")
-# caso maximo => para fritar
-tabela_uf = pipeline_completo("SP", "2017")
+# tabela_uf = pipeline_completo("AP", "2010")
+# caso maximo => para fritar: > 18 milhões de linhas
+# tabela_uf = pipeline_completo("SP", "2017")
+
+# RODAR
+for uf in UFs:
+    for ano in ANOS:
+        pipeline_completo(uf, ano)
+
