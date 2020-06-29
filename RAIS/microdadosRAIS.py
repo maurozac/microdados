@@ -10,8 +10,8 @@ Os arquivos de microdados podem ser grandes, acima de 10 GB depois de descompact
 Assim, este pipeline está organizado da seguinte forma:
 . baixar localmente o arquivo .7z e descompactar em um diretório temporário
 . limpar dados
-. aplicar modelo de agregação de dados
-. gerar arquivos finais e enviar para persistência (S3 ou dir local)
+. processar: aplicar modelo de agregação de dados
+. gerar arquivos finais e enviar para persistência (dir local)
 . apagar arquivos temporários
 . processar próximo arquivo .7z
 
@@ -38,8 +38,6 @@ import pandas as pd
 import wget
 import py7zr
 import requests
-import boto
-
 
 
 UFs = [
@@ -52,6 +50,7 @@ ANOS = ['2017', '2010']
 # Estes PATHs são do meu ambiente => use os seus aqui
 PATH_TEMP = "/Users/tapirus/Desktop/ITA/dados/RAIS/temp/"
 PATH_UTIL = "/Users/tapirus/Desktop/ITA/dados/RAIS/util/"
+PATH_END = "/Users/tapirus/Desktop/ITA/dados/RAIS/pronto/"
 
 
 def baixar_raw(uf, ano, path_temp):
@@ -76,13 +75,12 @@ def baixar_raw(uf, ano, path_temp):
         return None
 
     os.remove(filename)
-    print('[♫] Baixado e descompactado:', uf, ano)
 
-    return path_temp + extraidos[0], ano
+    return path_temp + extraidos[0]
 
 
 # TESTE
-path, ano = baixar_raw("AL", "2010", PATH_TEMP)
+# path = baixar_raw("AL", "2010", PATH_TEMP)
 
 
 # DICT com definições para os tipos de dados
@@ -148,15 +146,15 @@ def carregar_dados(path, ano, campos):
             )
 
     retirar = [_ for _ in frame.keys() if _ not in campos[ano].keys()]
-    # retirar.append("CBO Ocupação 2002")  # fix
+    os.remove(path)
 
     return frame.drop(columns=retirar)
 
 
 # TESTE
-df = carregar_dados(path, ano, CAMPOS_RAIS)
-df.shape
-fulano = df.iloc[1234]  # para ver um fulano qquer
+# df = carregar_dados(path, ano, CAMPOS_RAIS)
+# df.shape
+# fulano = df.iloc[1234]  # para ver um fulano qquer
 
 
 def classes_CNAE(path_to_cnae=None):
@@ -168,7 +166,7 @@ def classes_CNAE(path_to_cnae=None):
         url = "https://servicodados.ibge.gov.br/api/v2/cnae/classes"
         cnaes = json.loads(requests.get(url).text)
         with open(PATH_UTIL + "CNAEclasses.json", 'w', encoding='utf-8') as f:
-            json.dump(cnaes, f, ensure_ascii=False, indent=4)
+            json.dump(cnaes, f, ensure_ascii=False, indent=2)
         return cnaes
 
     f = open(path_to_cnae + "CNAEclasses.json")
@@ -178,6 +176,144 @@ def classes_CNAE(path_to_cnae=None):
     return cnaes
 
 # TESTE
-cnaes = classes_CNAE(PATH_UTIL)  # com arquivo CNAEclasses.json salvo em PATH_UTIL
-cnaes = classes_CNAE()  # init => baixa e salva em PATH_UTIL
+# cnaes = classes_CNAE(PATH_UTIL)  # com arquivo CNAEclasses.json salvo em PATH_UTIL
+# cnaes = classes_CNAE()  # init => baixa e salva em PATH_UTIL
 
+
+def consolidar_tabela(df_limpo, ano, municipios, classes):
+    """Esta tabela é a base para a estimativa de coeficentes locacionais.
+    """
+    col1, col2, col3, col4 = [], [], [], []
+    for x in municipios:
+        print(x)
+        select1 = df_limpo.loc[df_limpo['Município'] == x]
+        for y in classes:
+            select2 = select1.loc[select1['CNAE 2.0 Classe'] == y]
+            if ano == "2017":
+                valor, trabalhadores, esco, tam = calcula_valores_2017(select2)
+            elif ano == "2010":
+                valor, trabalhadores, esco, tam = calcula_valores_2010(select2)
+            else:
+                valor, trabalhadores, esco, tam = 0.0, 0.0, 0.0, 0.0
+            col1.append(valor)
+            col2.append(trabalhadores)
+            col3.append(esco)
+            col4.append(tam)
+    return col1, col2, col3, col4
+
+
+def calcula_valores_2017(df):
+    valor, trabalhadores, esco, tam = 0.0, 0.0, 0.0, 0.0
+    casos = df.shape[0]
+    if not casos:
+        return valor, trabalhadores, esco, tam
+    for index, row in df.iterrows():
+        ano = [
+            row['Vl Rem Janeiro CC'],
+            row['Vl Rem Fevereiro CC'],
+            row['Vl Rem Março CC'],
+            row['Vl Rem Abril CC'],
+            row['Vl Rem Maio CC'],
+            row['Vl Rem Junho CC'],
+            row['Vl Rem Julho CC'],
+            row['Vl Rem Agosto CC'],
+            row['Vl Rem Setembro CC'],
+            row['Vl Rem Outubro CC'],
+            row['Vl Rem Novembro CC'],
+            row['Vl Remun Dezembro Nom'],
+        ]
+        ano = [m for m in ano if m > 0.0]  # elimina meses sem contrato
+        contagem = len(ano)/12.0   # igual a 1 se trabalhou o ano inteiro, ou < 1
+        trabalhadores += contagem
+        # acontecem erros de digitacao ou conversão dos decimais => corrigir?
+        # usando a remuneração média que normalmente vem correta
+        total = row['Vl Remun Média Nom'] * len(ano)
+        # acrescido de 1/3 de férias e décimo terceiro salário (proporcionais)
+        # quase igual a Brene et al. (2014), exceto que ajustamos para o ano todo
+        treze = row['Vl Remun Média Nom'] * len(ano)/12
+        ferias = treze * 0.333
+        valor += total + ferias + treze
+        esco += int(row["Escolaridade após 2005"]) * contagem  # pondera pelo tempo empregado
+        tam += int(row["Tamanho Estabelecimento"])
+
+    # massa salarial e empregos são somas
+    # escolaridade e tamanho do estab são médias
+    esco = esco/max(1, trabalhadores)  # media ponderada
+    tam = tam/casos
+
+    return valor, trabalhadores, esco, tam
+
+
+def calcula_valores_2010(df):
+    valor, trabalhadores, esco, tam = 0.0, 0.0, 0.0, 0.0
+    casos = df.shape[0]
+    if not casos:
+        return valor, trabalhadores, esco, tam
+    for index, row in df.iterrows():
+        # dados de 2010 não estão detalhados por mês
+        # padrão metodológico é usar valor para DEZEMBRO [Brene et al. (2014)]
+        # caso o individuo esteja empregado em dezembro...
+        if row['Vl Remun Dezembro Nom']:
+            trabalhadores += 1
+            # usando a remuneração média que normalmente vem correta
+            total = row['Vl Remun Média Nom'] * 12
+            # acrescido de 1/3 de férias e décimo terceiro salário (proporcionais)
+            # quase igual a , exceto que ajustamos para o ano todo
+            treze = row['Vl Remun Média Nom']
+            ferias = treze * 0.333
+            valor += total + ferias + treze
+            esco += int(row["Escolaridade após 2005"])
+            tam += int(row["Tamanho Estabelecimento"])
+
+    # massa salarial e empregos são somas
+    # escolaridade e tamanho do estab são médias
+    esco = esco/max(1, trabalhadores)  # media ponderada
+    tam = tam/casos
+
+    return valor, trabalhadores, esco, tam
+
+
+def pipeline_completo(uf, ano):
+    """Roda todo o pipeline para uma uf/ano.
+    Retorna o
+    """
+    print("- - -")
+    lista_classes = [x['id'] for x in classes_CNAE(PATH_UTIL)]
+    lista_classes.sort()  # 673 classes [completo e ordenado]
+
+    path = baixar_raw(uf, ano, PATH_TEMP)
+    print('\n[♫] Baixado e descompactado:', uf, ano)
+
+    df = carregar_dados(path, ano, CAMPOS_RAIS)
+    print('[♫] DataFrame carregado:', uf, ano)
+    print('[◔◔] com', df.shape[0], "linhas")
+
+    municipios = df['Município'].unique()
+    municipios.sort()  # ordenados
+
+    col1, col2, col3, col4 = consolidar_tabela(df, ano, municipios, lista_classes)
+
+    tupla = [(x, y) for x in municipios for y in lista_classes]
+    mu_index = pd.MultiIndex.from_tuples(tupla, names=['Município', 'Classe CNAE'])
+
+    tabela_uf = pd.DataFrame(
+        {
+            "Valor do Trabalho (R$ nom)": col1,  # soma dos salários pagos + 13º + extras
+            "Pessoal empregado": col2,  # n de empregados, pode ser fracionado
+            "Escolaridade": col3,  # indice medio de escolaridade
+            "Tamanho do estabelecimentos": col4, # indice medio do tamanho do estabelecimento
+        },
+        index = mu_index
+    )
+
+    tabela_uf.to_csv(PATH_END + uf + ano + ".csv")
+    print('[♫] CSV consolidado pronto:', uf, ano)
+    print('[◔◔] com', tabela_uf.shape[0], "linhas")
+
+    return tabela_uf
+
+
+# teste
+tabela_uf = pipeline_completo("AP", "2010")
+# caso maximo => para fritar
+tabela_uf = pipeline_completo("SP", "2017")
