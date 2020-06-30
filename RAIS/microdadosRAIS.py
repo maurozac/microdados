@@ -366,6 +366,46 @@ def consolidar_uf(uf, ano):
     return pronto
 
 
+def consolidar_BR(ano):
+    """Gera tabela consolidada para o territorio nacional (soma ufs).
+    """
+    cnaes = classes_CNAE(PATH_UTIL)
+    lista_classes = [x['id'] for x in cnaes]
+    lista_classes.sort()  # 673 classes [completo e ordenado]
+
+    col1 = np.array([0.0 for _ in lista_classes])
+    col2 = np.array([0.000001 for _ in lista_classes])  # init para evitar NaN
+    col3 = np.array([0.0 for _ in lista_classes])
+    col4 = np.array([0.0 for _ in lista_classes])
+
+    for uf in UFs:
+        local = pd.read_csv(PATH_UFS + uf + ano + ".csv")
+        col1 += local['Valor do Trabalho (R$ nom)'].values
+        col3 = (col3*col2 + local['Escolaridade'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        col4 = (col4*col2 + local['Tamanho do estabelecimentos'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        # pessoal por ultimo para não estragar a ponderação de col3 e col4
+        col2 += local['Pessoal empregado'].values
+
+    br = pd.DataFrame(
+        {
+            "Valor do Trabalho (R$ nom)": col1,  # soma dos salários pagos + 13º + extras
+            "Pessoal empregado": col2,  # n de empregados, pode ser fracionado
+            "Escolaridade": col3,  # indice medio de escolaridade
+            "Tamanho do estabelecimentos": col4, # indice medio do tamanho do estabelecimento
+        },
+        index = pd.Index(lista_classes, name="Classe CNAE")
+    )
+
+    # adiciona descricao das classes CNAE
+    desc = [x['descricao'] for x in cnaes]
+    br['Atividade Econômica'] = pd.Series(desc, index=br.index)
+
+    br.to_csv(PATH_UFS + "BRASIL" + ano + ".csv")
+    print('[♫] CSV BR pronto:', ano)
+
+    return br
+
+
 ################################################################################################
 
 # RODAR - PASSO 1
@@ -378,7 +418,10 @@ for uf in UFs:
     for ano in ANOS:
         consolidar_uf(uf, ano)
 
-
+# RODAR - PASSO 3
+for ano in ANOS:
+    consolidar_BR(ano)
+    
 ################################################################################################
 
 """
