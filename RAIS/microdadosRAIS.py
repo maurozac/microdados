@@ -51,6 +51,7 @@ ANOS = ['2017', '2010']
 PATH_TEMP = "/Users/tapirus/Desktop/ITA/dados/RAIS/temp/"
 PATH_UTIL = "/Users/tapirus/Desktop/ITA/dados/RAIS/util/"
 PATH_END = "/Users/tapirus/Desktop/ITA/dados/RAIS/pronto/"
+PATH_UFS = "/Users/tapirus/Desktop/ITA/dados/RAIS/ufs/"
 
 
 def baixar_raw(uf, ano, path_temp):
@@ -320,11 +321,65 @@ def pipeline_completo(uf, ano):
 # caso maximo => para fritar: > 18 milhões de linhas
 # tabela_uf = pipeline_completo("SP", "2017")
 
-# RODAR
+
+def consolidar_uf(uf, ano):
+    """Gera tabela consolidada para o territorio da uf (soma municipios).
+    """
+    tabela_uf = pd.read_csv(PATH_END + uf + ano + ".csv")
+
+    municipios = tabela_uf['Município'].unique()
+    municipios.sort()
+    cnaes = classes_CNAE(PATH_UTIL)
+    lista_classes = [x['id'] for x in cnaes]
+    lista_classes.sort()  # 673 classes [completo e ordenado]
+
+    col1 = np.array([0.0 for _ in lista_classes])
+    col2 = np.array([0.000001 for _ in lista_classes])  # init para evitar NaN
+    col3 = np.array([0.0 for _ in lista_classes])
+    col4 = np.array([0.0 for _ in lista_classes])
+
+    for m in municipios:
+        local = tabela_uf.loc[tabela_uf["Município"] == m]
+        col1 += local['Valor do Trabalho (R$ nom)'].values
+        col3 = (col3*col2 + local['Escolaridade'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        col4 = (col4*col2 + local['Tamanho do estabelecimentos'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        # pessoal por ultimo para não estragar a ponderação de col3 e col4
+        col2 += local['Pessoal empregado'].values
+
+    pronto = pd.DataFrame(
+        {
+            "Valor do Trabalho (R$ nom)": col1,  # soma dos salários pagos + 13º + extras
+            "Pessoal empregado": col2,  # n de empregados, pode ser fracionado
+            "Escolaridade": col3,  # indice medio de escolaridade
+            "Tamanho do estabelecimentos": col4, # indice medio do tamanho do estabelecimento
+        },
+        index = pd.Index(lista_classes, name="Classe CNAE")
+    )
+
+    # adiciona descricao das classes CNAE
+    desc = [x['descricao'] for x in cnaes]
+    pronto['Atividade Econômica'] = pd.Series(desc, index=pronto.index)
+
+    pronto.to_csv(PATH_UFS + uf + ano + ".csv")
+    print('[♫] CSV UF pronto:', uf, ano)
+
+    return pronto
+
+
+################################################################################################
+
+# RODAR - PASSO 1
 for uf in UFs:
     for ano in ANOS:
         pipeline_completo(uf, ano)
 
+# RODAR - PASSO 2
+for uf in UFs:
+    for ano in ANOS:
+        consolidar_uf(uf, ano)
+
+
+################################################################################################
 
 """
 Range das Escalas
