@@ -45,6 +45,7 @@ UFs = [
     'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC',
     'SP', 'SE', 'TO',
     ]
+
 ANOS = ['2017', '2010']
 
 # Estes PATHs são do meu ambiente => use os seus aqui
@@ -52,6 +53,7 @@ PATH_TEMP = "/Users/tapirus/Desktop/ITA/dados/RAIS/temp/"
 PATH_UTIL = "/Users/tapirus/Desktop/ITA/dados/RAIS/util/"
 PATH_END = "/Users/tapirus/Desktop/ITA/dados/RAIS/pronto/"
 PATH_UFS = "/Users/tapirus/Desktop/ITA/dados/RAIS/ufs/"
+PATH_REC = "/Users/tapirus/Desktop/ITA/dados/RAIS/recortes/"
 
 
 def baixar_raw(uf, ano, path_temp):
@@ -406,6 +408,60 @@ def consolidar_BR(ano):
     return br
 
 
+def gerar_recorte(nome, uf, ano, ids):
+    """Consolida um recorte dentro de uma UF a partir de
+    uma lista de ids de municipios.
+    """
+    if type(ids) is not list:
+        print('[!] IDs precisam ser fornecidos como lista')
+        return None
+
+    base = pd.read_csv(PATH_END + uf + ano + ".csv")
+
+    cnaes = classes_CNAE(PATH_UTIL)
+    lista_classes = [x['id'] for x in cnaes]
+    lista_classes.sort()  # 673 classes [completo e ordenado]
+
+    col1 = np.array([0.0 for _ in lista_classes])
+    col2 = np.array([0.000001 for _ in lista_classes])  # init para evitar NaN
+    col3 = np.array([0.0 for _ in lista_classes])
+    col4 = np.array([0.0 for _ in lista_classes])
+
+    for mun in ids:
+        local = base.loc[base['Município'] == int(mun)]
+        col1 += local['Valor do Trabalho (R$ nom)'].values
+        col3 = (col3*col2 + local['Escolaridade'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        col4 = (col4*col2 + local['Tamanho do estabelecimentos'].values*local['Pessoal empregado'].values) / (col2+local['Pessoal empregado'].values)
+        # pessoal por ultimo para não estragar a ponderação de col3 e col4
+        col2 += local['Pessoal empregado'].values
+
+    recorte = pd.DataFrame(
+        {
+            "Valor do Trabalho (R$ nom)": col1,  # soma dos salários pagos + 13º + extras
+            "Pessoal empregado": col2,  # n de empregados, pode ser fracionado
+            "Escolaridade": col3,  # indice medio de escolaridade
+            "Tamanho do estabelecimentos": col4, # indice medio do tamanho do estabelecimento
+        },
+        index = pd.Index(lista_classes, name="Classe CNAE")
+    )
+
+    # adiciona descricao das classes CNAE
+    desc = [x['descricao'] for x in cnaes]
+    recorte['Atividade Econômica'] = pd.Series(desc, index=recorte.index)
+
+    recorte.to_csv(PATH_REC + nome + ano + ".csv")
+    print('[♫] CSV ' + nome + ' pronto:', ano)
+
+    return recorte
+
+
+# Testes
+# recorte = gerar_recorte('Campinas', 'SP', '2017', [350950])
+# recorte = gerar_recorte('Campinas', 'SP', '2010', [350950])
+# recorte = gerar_recorte('SJC', 'SP', '2017', [354990])
+# recorte = gerar_recorte('SJC', 'SP', '2010', [354990])
+
+
 ################################################################################################
 
 # RODAR - PASSO 1
@@ -421,7 +477,35 @@ for uf in UFs:
 # RODAR - PASSO 3
 for ano in ANOS:
     consolidar_BR(ano)
-    
+ 
+# RODAR - PASSO 4
+RMC = {
+    "350160":"Americana",
+    "350380":"Artur Nogueira",
+    "350950":"Campinas",
+    "351280":"Cosmópolis",
+    "351515":"Engenheiro Coelho",
+    "351905":"Holambra",
+    "351907":"Hortolândia",
+    "352050":"Indaiatuba",
+    "352340":"Itatiba",
+    "352470":"Jaguariúna",
+    "353180":"Monte Mor",
+    "353200":"Morungaba",
+    "353340":"Nova Odessa",
+    "353650":"Paulínia",
+    "353710":"Pedreira",
+    "354580":"Santa Bárbara d'Oeste",
+    "354800":"Santo Antônio de Posse",
+    "355240":"Sumaré",
+    "355620":"Valinhos",
+    "355670":"Vinhedo",
+}
+
+RMC_17 = gerar_recorte('RMC', 'SP', '2017', list(RMC.keys()))
+RMC_10 = gerar_recorte('RMC', 'SP', '2010', list(RMC.keys()))
+
+
 ################################################################################################
 
 """
