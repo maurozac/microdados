@@ -1,4 +1,4 @@
-"""Baixar e estruturar microdados da PNAD Contínua em um dataframe."""
+"""Baixa e estrutura microdados da PNAD Contínua em dataframes."""
 
 __version__ = "1.0"
 __author__ = "Mauro Zackiewicz"   # codigo
@@ -125,5 +125,3 @@ with open(txt) as f:
 
 # apagar txt
 os.remove(txt)
-
-
