@@ -1,0 +1,2942 @@
+[
+  {
+    "inicio": 0,
+    "largura": 4,
+    "nome": "Ano",
+    "tipo": "cat",
+    "desc": "Ano de refer\u00eancia"
+  },
+  {
+    "inicio": 4,
+    "largura": 1,
+    "nome": "Trimestre",
+    "tipo": "cat",
+    "desc": "Trimestre de refer\u00eancia"
+  },
+  {
+    "inicio": 5,
+    "largura": 2,
+    "nome": "UF",
+    "tipo": "cat",
+    "desc": "Unidade da Federa\u00e7\u00e3o"
+  },
+  {
+    "inicio": 7,
+    "largura": 2,
+    "nome": "Capital",
+    "tipo": "cat",
+    "desc": "Munic\u00edpio da Capital"
+  },
+  {
+    "inicio": 9,
+    "largura": 2,
+    "nome": "RM_RIDE",
+    "tipo": "cat",
+    "desc": "Reg. Metr. e Reg. Adm. Int. Des."
+  },
+  {
+    "inicio": 11,
+    "largura": 9,
+    "nome": "UPA",
+    "tipo": "cat",
+    "desc": "Unidade Prim\u00e1ria de Amostragem"
+  },
+  {
+    "inicio": 20,
+    "largura": 7,
+    "nome": "Estrato",
+    "tipo": "cat",
+    "desc": "Estrato"
+  },
+  {
+    "inicio": 27,
+    "largura": 2,
+    "nome": "V1008",
+    "tipo": "cat",
+    "desc": "N\u00famero de sele\u00e7\u00e3o do domic\u00edlio"
+  },
+  {
+    "inicio": 29,
+    "largura": 2,
+    "nome": "V1014",
+    "tipo": "cat",
+    "desc": "Painel"
+  },
+  {
+    "inicio": 31,
+    "largura": 1,
+    "nome": "V1016",
+    "tipo": "cat",
+    "desc": "N\u00famero da entrevista no domic\u00edlio"
+  },
+  {
+    "inicio": 32,
+    "largura": 1,
+    "nome": "V1022",
+    "tipo": "cat",
+    "desc": "Tipo de situa\u00e7\u00e3o da regi\u00e3o"
+  },
+  {
+    "inicio": 33,
+    "largura": 1,
+    "nome": "V1023",
+    "tipo": "cat",
+    "desc": "Tipo de \u00e1rea"
+  },
+  {
+    "inicio": 34,
+    "largura": 15,
+    "nome": "V1027",
+    "tipo": "num",
+    "desc": "Peso SEM calibra\u00e7\u00e3o"
+  },
+  {
+    "inicio": 49,
+    "largura": 15,
+    "nome": "V1028",
+    "tipo": "num",
+    "desc": "Peso COM calibra\u00e7\u00e3o"
+  },
+  {
+    "inicio": 64,
+    "largura": 9,
+    "nome": "V1029",
+    "tipo": "num",
+    "desc": "Proje\u00e7\u00e3o da popula\u00e7\u00e3o por n\u00edveis geogr\u00e1ficos"
+  },
+  {
+    "inicio": 73,
+    "largura": 9,
+    "nome": "V1033",
+    "tipo": "num",
+    "desc": "Proje\u00e7\u00e3o da popula\u00e7\u00e3o por sexo e idade"
+  },
+  {
+    "inicio": 82,
+    "largura": 3,
+    "nome": "posest",
+    "tipo": "cat",
+    "desc": "Dom\u00ednios de proje\u00e7\u00e3o geogr\u00e1ficos"
+  },
+  {
+    "inicio": 85,
+    "largura": 3,
+    "nome": "posest_sxi",
+    "tipo": "cat",
+    "desc": "Dom\u00ednios de proje\u00e7\u00e3o por sexo e idade"
+  },
+  {
+    "inicio": 88,
+    "largura": 2,
+    "nome": "V2001",
+    "tipo": "num",
+    "desc": "N\u00famero de pessoas no domic\u00edlio"
+  },
+  {
+    "inicio": 90,
+    "largura": 2,
+    "nome": "V2003",
+    "tipo": "cat",
+    "desc": "N\u00famero de ordem"
+  },
+  {
+    "inicio": 92,
+    "largura": 2,
+    "nome": "V2005",
+    "tipo": "cat",
+    "desc": "Condi\u00e7\u00e3o no domic\u00edlio"
+  },
+  {
+    "inicio": 94,
+    "largura": 1,
+    "nome": "V2007",
+    "tipo": "cat",
+    "desc": "Sexo"
+  },
+  {
+    "inicio": 95,
+    "largura": 2,
+    "nome": "V2008",
+    "tipo": "cat",
+    "desc": "Dia de nascimento"
+  },
+  {
+    "inicio": 97,
+    "largura": 2,
+    "nome": "V20081",
+    "tipo": "cat",
+    "desc": "M\u00eas de nascimento"
+  },
+  {
+    "inicio": 99,
+    "largura": 4,
+    "nome": "V20082",
+    "tipo": "cat",
+    "desc": "Ano de nascimento"
+  },
+  {
+    "inicio": 103,
+    "largura": 3,
+    "nome": "V2009",
+    "tipo": "num",
+    "desc": "Idade na data de refer\u00eancia"
+  },
+  {
+    "inicio": 106,
+    "largura": 1,
+    "nome": "V2010",
+    "tipo": "cat",
+    "desc": "Cor ou ra\u00e7a"
+  },
+  {
+    "inicio": 107,
+    "largura": 1,
+    "nome": "V3001",
+    "tipo": "cat",
+    "desc": "Sabe ler e escrever"
+  },
+  {
+    "inicio": 108,
+    "largura": 1,
+    "nome": "V3002",
+    "tipo": "cat",
+    "desc": "Frequenta escola"
+  },
+  {
+    "inicio": 109,
+    "largura": 1,
+    "nome": "V3002A",
+    "tipo": "cat",
+    "desc": "A escola que ... frequenta \u00e9 de"
+  },
+  {
+    "inicio": 110,
+    "largura": 2,
+    "nome": "V3003",
+    "tipo": "cat",
+    "desc": "Qual \u00e9 o curso que frequenta"
+  },
+  {
+    "inicio": 112,
+    "largura": 2,
+    "nome": "V3003A",
+    "tipo": "cat",
+    "desc": "Qual \u00e9 o curso que frequenta"
+  },
+  {
+    "inicio": 114,
+    "largura": 1,
+    "nome": "V3004",
+    "tipo": "cat",
+    "desc": "Dura\u00e7\u00e3o deste curso que requenta"
+  },
+  {
+    "inicio": 115,
+    "largura": 1,
+    "nome": "V3005",
+    "tipo": "cat",
+    "desc": "Curso que frequenta \u00e9 seriado"
+  },
+  {
+    "inicio": 116,
+    "largura": 1,
+    "nome": "V3005A",
+    "tipo": "cat",
+    "desc": "Curso que freq \u00e9 organizado em:"
+  },
+  {
+    "inicio": 117,
+    "largura": 2,
+    "nome": "V3006",
+    "tipo": "cat",
+    "desc": "Qual \u00e9 o ano/s\u00e9rie que frequenta"
+  },
+  {
+    "inicio": 119,
+    "largura": 1,
+    "nome": "V3006A",
+    "tipo": "cat",
+    "desc": "Qual \u00e9 a etapa que frequenta"
+  },
+  {
+    "inicio": 120,
+    "largura": 1,
+    "nome": "V3007",
+    "tipo": "cat",
+    "desc": "Concluiu outro curso de gradua\u00e7\u00e3o"
+  },
+  {
+    "inicio": 121,
+    "largura": 1,
+    "nome": "V3008",
+    "tipo": "cat",
+    "desc": "Anteriormente frequentou escola"
+  },
+  {
+    "inicio": 122,
+    "largura": 2,
+    "nome": "V3009",
+    "tipo": "cat",
+    "desc": "Curso mais elevado que frequentou"
+  },
+  {
+    "inicio": 124,
+    "largura": 2,
+    "nome": "V3009A",
+    "tipo": "cat",
+    "desc": "Curso mais elevado que frequentou"
+  },
+  {
+    "inicio": 126,
+    "largura": 1,
+    "nome": "V3010",
+    "tipo": "cat",
+    "desc": "Dura\u00e7\u00e3o do curso que frequentou"
+  },
+  {
+    "inicio": 127,
+    "largura": 1,
+    "nome": "V3011",
+    "tipo": "cat",
+    "desc": "Curso quefrequentou era seriado"
+  },
+  {
+    "inicio": 128,
+    "largura": 1,
+    "nome": "V3011A",
+    "tipo": "cat",
+    "desc": "Curso que freq \u00e9 organizado em:"
+  },
+  {
+    "inicio": 129,
+    "largura": 1,
+    "nome": "V3012",
+    "tipo": "cat",
+    "desc": "Aprovado na prim. s\u00e9rie do curso"
+  },
+  {
+    "inicio": 130,
+    "largura": 2,
+    "nome": "V3013",
+    "tipo": "cat",
+    "desc": "\u00daltimo ano/s\u00e9rie que concluiu"
+  },
+  {
+    "inicio": 132,
+    "largura": 1,
+    "nome": "V3013A",
+    "tipo": "cat",
+    "desc": "Qual \u00e9 a etapa que frequentou"
+  },
+  {
+    "inicio": 133,
+    "largura": 1,
+    "nome": "V3013B",
+    "tipo": "cat",
+    "desc": "Cursou os anos iniciais deste curso"
+  },
+  {
+    "inicio": 134,
+    "largura": 1,
+    "nome": "V3014",
+    "tipo": "cat",
+    "desc": "Concluiu o curso que frequentou"
+  },
+  {
+    "inicio": 135,
+    "largura": 1,
+    "nome": "V4001",
+    "tipo": "cat",
+    "desc": "Trabalhou 1 hr em ativ. remunerd."
+  },
+  {
+    "inicio": 136,
+    "largura": 1,
+    "nome": "V4002",
+    "tipo": "cat",
+    "desc": "Trabalhou 1 hr em produtos etc..."
+  },
+  {
+    "inicio": 137,
+    "largura": 1,
+    "nome": "V4003",
+    "tipo": "cat",
+    "desc": "Fez algum bico pelo menos de 1 hr"
+  },
+  {
+    "inicio": 138,
+    "largura": 1,
+    "nome": "V4004",
+    "tipo": "cat",
+    "desc": "Ajudou sem receber no domic. 1 hr"
+  },
+  {
+    "inicio": 139,
+    "largura": 1,
+    "nome": "V4005",
+    "tipo": "cat",
+    "desc": "Afastado trabalho remunerado"
+  },
+  {
+    "inicio": 140,
+    "largura": 1,
+    "nome": "V4006",
+    "tipo": "cat",
+    "desc": "Motivo de estar afastado"
+  },
+  {
+    "inicio": 141,
+    "largura": 1,
+    "nome": "V4006A",
+    "tipo": "cat",
+    "desc": "Motivo de estar afastado"
+  },
+  {
+    "inicio": 142,
+    "largura": 1,
+    "nome": "V4007",
+    "tipo": "cat",
+    "desc": "Durante afastameno recebia pagam."
+  },
+  {
+    "inicio": 143,
+    "largura": 1,
+    "nome": "V4008",
+    "tipo": "cat",
+    "desc": "Quanto tempo que estava afastado"
+  },
+  {
+    "inicio": 144,
+    "largura": 2,
+    "nome": "V40081",
+    "tipo": "cat",
+    "desc": "Tempo de afastamenento at\u00e9 1 ano"
+  },
+  {
+    "inicio": 146,
+    "largura": 2,
+    "nome": "V40082",
+    "tipo": "cat",
+    "desc": "Tempo de afastamen. de 1 a 2 anos"
+  },
+  {
+    "inicio": 148,
+    "largura": 2,
+    "nome": "V40083",
+    "tipo": "cat",
+    "desc": "Tempo de afastamen. mais d 2 anos"
+  },
+  {
+    "inicio": 150,
+    "largura": 1,
+    "nome": "V4009",
+    "tipo": "cat",
+    "desc": "Quantos trabalhos tinhana semana"
+  },
+  {
+    "inicio": 151,
+    "largura": 4,
+    "nome": "V4010",
+    "tipo": "cat",
+    "desc": "Ocupa\u00e7\u00e3o no trab. principal"
+  },
+  {
+    "inicio": 155,
+    "largura": 1,
+    "nome": "V4012",
+    "tipo": "cat",
+    "desc": "Posi\u00e7\u00e3o na ocupa\u00e7\u00e3o"
+  },
+  {
+    "inicio": 156,
+    "largura": 1,
+    "nome": "V40121",
+    "tipo": "cat",
+    "desc": "Tipo trabalhador n\u00e3o remunerado"
+  },
+  {
+    "inicio": 157,
+    "largura": 5,
+    "nome": "V4013",
+    "tipo": "cat",
+    "desc": "Atividade no trab. principal"
+  },
+  {
+    "inicio": 162,
+    "largura": 1,
+    "nome": "V40132",
+    "tipo": "cat",
+    "desc": "Se\u00e7\u00e3o da atividade"
+  },
+  {
+    "inicio": 163,
+    "largura": 1,
+    "nome": "V40132A",
+    "tipo": "cat",
+    "desc": "Se\u00e7\u00e3o da atividade"
+  },
+  {
+    "inicio": 164,
+    "largura": 1,
+    "nome": "V4014",
+    "tipo": "cat",
+    "desc": "Esse trabalho era na \u00e1rea"
+  },
+  {
+    "inicio": 165,
+    "largura": 1,
+    "nome": "V4015",
+    "tipo": "cat",
+    "desc": "Teve ajuda de pelo menos um trabalhador n\u00e3o remunerado"
+  },
+  {
+    "inicio": 166,
+    "largura": 1,
+    "nome": "V40151",
+    "tipo": "cat",
+    "desc": "Qnts trabalhadores n\u00e3o remunerados"
+  },
+  {
+    "inicio": 167,
+    "largura": 1,
+    "nome": "V401511",
+    "tipo": "cat",
+    "desc": "1 a 5 trabalhadores n\u00e3o remunerados"
+  },
+  {
+    "inicio": 168,
+    "largura": 2,
+    "nome": "V401512",
+    "tipo": "cat",
+    "desc": "6 a 10 trabalhadores n\u00e3o remunerados"
+  },
+  {
+    "inicio": 170,
+    "largura": 1,
+    "nome": "V4016",
+    "tipo": "cat",
+    "desc": "Qnts empregados trabalhavam nesse neg\u00f3cio/empresa*/"
+  },
+  {
+    "inicio": 171,
+    "largura": 1,
+    "nome": "V40161",
+    "tipo": "cat",
+    "desc": "1 a 5 empregados"
+  },
+  {
+    "inicio": 172,
+    "largura": 2,
+    "nome": "V40162",
+    "tipo": "cat",
+    "desc": "6 a 10 empregados"
+  },
+  {
+    "inicio": 174,
+    "largura": 2,
+    "nome": "V40163",
+    "tipo": "cat",
+    "desc": "11 a 50 empregados"
+  },
+  {
+    "inicio": 176,
+    "largura": 1,
+    "nome": "V4017",
+    "tipo": "cat",
+    "desc": "Tinha pelo menos um s\u00f3cio que trab. nesse neg\u00f3cio/empresa*/"
+  },
+  {
+    "inicio": 177,
+    "largura": 1,
+    "nome": "V40171",
+    "tipo": "cat",
+    "desc": "Quantos s\u00f3cios"
+  },
+  {
+    "inicio": 178,
+    "largura": 1,
+    "nome": "V401711",
+    "tipo": "cat",
+    "desc": "1 a 5 s\u00f3cios"
+  },
+  {
+    "inicio": 179,
+    "largura": 1,
+    "nome": "V4018",
+    "tipo": "cat",
+    "desc": "Qnts pessoas trabalhavam nesse neg\u00f3cio/empresa"
+  },
+  {
+    "inicio": 180,
+    "largura": 1,
+    "nome": "V40181",
+    "tipo": "cat",
+    "desc": "1 a 5pessoas"
+  },
+  {
+    "inicio": 181,
+    "largura": 2,
+    "nome": "V40182",
+    "tipo": "cat",
+    "desc": "6 a 10pessoas"
+  },
+  {
+    "inicio": 183,
+    "largura": 2,
+    "nome": "V40183",
+    "tipo": "cat",
+    "desc": "11 a 50pessoas"
+  },
+  {
+    "inicio": 185,
+    "largura": 1,
+    "nome": "V4019",
+    "tipo": "cat",
+    "desc": "Neg\u00f3cio/empresa registrado no CNPJ*/"
+  },
+  {
+    "inicio": 186,
+    "largura": 1,
+    "nome": "V4020",
+    "tipo": "cat",
+    "desc": "Em que tipo de local funcionava esse neg\u00f3cio/empresa*/"
+  },
+  {
+    "inicio": 187,
+    "largura": 1,
+    "nome": "V4021",
+    "tipo": "cat",
+    "desc": "Exercia o trabalho em estabelecimento desse neg\u00f3cio/empresa*/ "
+  },
+  {
+    "inicio": 188,
+    "largura": 1,
+    "nome": "V4022",
+    "tipo": "cat",
+    "desc": "Onde exercia normalmente esse trabalho*/"
+  },
+  {
+    "inicio": 189,
+    "largura": 1,
+    "nome": "V4024",
+    "tipo": "cat",
+    "desc": "Serv. dom\u00e9st. em mais de 1 domic."
+  },
+  {
+    "inicio": 190,
+    "largura": 1,
+    "nome": "V4025",
+    "tipo": "cat",
+    "desc": "Contratado como empreg. tempor\u00e1rio*/"
+  },
+  {
+    "inicio": 191,
+    "largura": 1,
+    "nome": "V4026",
+    "tipo": "cat",
+    "desc": "Era contratado somente por pessoa respons\u00e1vel pelo neg\u00f3cio"
+  },
+  {
+    "inicio": 192,
+    "largura": 1,
+    "nome": "V4027",
+    "tipo": "cat",
+    "desc": "Era contratado somente por intermedi\u00e1rio"
+  },
+  {
+    "inicio": 193,
+    "largura": 1,
+    "nome": "V4028",
+    "tipo": "cat",
+    "desc": "Servidor p\u00fablico estatut\u00e1rio"
+  },
+  {
+    "inicio": 194,
+    "largura": 1,
+    "nome": "V4029",
+    "tipo": "cat",
+    "desc": "Carteira de trabalho assinada"
+  },
+  {
+    "inicio": 195,
+    "largura": 1,
+    "nome": "V4032",
+    "tipo": "cat",
+    "desc": "Contribuinte de instit. d previd."
+  },
+  {
+    "inicio": 196,
+    "largura": 1,
+    "nome": "V4033",
+    "tipo": "cat",
+    "desc": "Rendimento habitual var. auxil."
+  },
+  {
+    "inicio": 197,
+    "largura": 1,
+    "nome": "V40331",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em dinheiro"
+  },
+  {
+    "inicio": 198,
+    "largura": 1,
+    "nome": "V403311",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 199,
+    "largura": 8,
+    "nome": "V403312",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em dinheiro"
+  },
+  {
+    "inicio": 207,
+    "largura": 1,
+    "nome": "V40332",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em produtos"
+  },
+  {
+    "inicio": 208,
+    "largura": 1,
+    "nome": "V403321",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 209,
+    "largura": 8,
+    "nome": "V403322",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em produtos"
+  },
+  {
+    "inicio": 217,
+    "largura": 1,
+    "nome": "V40333",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 218,
+    "largura": 1,
+    "nome": "V403331",
+    "tipo": "cat",
+    "desc": "Tipo rend. habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 219,
+    "largura": 1,
+    "nome": "V4034",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo var. auxil."
+  },
+  {
+    "inicio": 220,
+    "largura": 1,
+    "nome": "V40341",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em dinheiro"
+  },
+  {
+    "inicio": 221,
+    "largura": 1,
+    "nome": "V403411",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 222,
+    "largura": 8,
+    "nome": "V403412",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em dinheiro"
+  },
+  {
+    "inicio": 230,
+    "largura": 1,
+    "nome": "V40342",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em produtos"
+  },
+  {
+    "inicio": 231,
+    "largura": 1,
+    "nome": "V403421",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 232,
+    "largura": 8,
+    "nome": "V403422",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em produtos"
+  },
+  {
+    "inicio": 240,
+    "largura": 3,
+    "nome": "V4039",
+    "tipo": "num",
+    "desc": "Hrs habituais no trab. princ."
+  },
+  {
+    "inicio": 243,
+    "largura": 3,
+    "nome": "V4039C",
+    "tipo": "num",
+    "desc": "Hrs efetivas no trab. princ."
+  },
+  {
+    "inicio": 246,
+    "largura": 1,
+    "nome": "V4040",
+    "tipo": "cat",
+    "desc": "Tempo que estava nesse trabalho"
+  },
+  {
+    "inicio": 247,
+    "largura": 2,
+    "nome": "V40401",
+    "tipo": "num",
+    "desc": "De 1 m\u00eas a menos de 1 ano"
+  },
+  {
+    "inicio": 249,
+    "largura": 2,
+    "nome": "V40402",
+    "tipo": "num",
+    "desc": "De 1 ano a menos de 2 anos"
+  },
+  {
+    "inicio": 251,
+    "largura": 2,
+    "nome": "V40403",
+    "tipo": "num",
+    "desc": "De 2 anos ou mais tempo"
+  },
+  {
+    "inicio": 253,
+    "largura": 4,
+    "nome": "V4041",
+    "tipo": "cat",
+    "desc": "Ocupa\u00e7\u00e3o no trab. secund\u00e1rio"
+  },
+  {
+    "inicio": 257,
+    "largura": 1,
+    "nome": "V4043",
+    "tipo": "cat",
+    "desc": "Posi\u00e7\u00e3o na ocupa\u00e7\u00e3o"
+  },
+  {
+    "inicio": 258,
+    "largura": 1,
+    "nome": "V40431",
+    "tipo": "cat",
+    "desc": "Tipo trabalhador n\u00e3o remunerado"
+  },
+  {
+    "inicio": 259,
+    "largura": 5,
+    "nome": "V4044",
+    "tipo": "cat",
+    "desc": "Atividade no trab. secund\u00e1rio"
+  },
+  {
+    "inicio": 264,
+    "largura": 1,
+    "nome": "V4045",
+    "tipo": "cat",
+    "desc": "Esse trabalho era na \u00e1rea"
+  },
+  {
+    "inicio": 265,
+    "largura": 1,
+    "nome": "V4046",
+    "tipo": "cat",
+    "desc": "Neg\u00f3cio/empresa registrado no CNPJ*/"
+  },
+  {
+    "inicio": 266,
+    "largura": 1,
+    "nome": "V4047",
+    "tipo": "cat",
+    "desc": "Servidor p\u00fablico estatut\u00e1rio"
+  },
+  {
+    "inicio": 267,
+    "largura": 1,
+    "nome": "V4048",
+    "tipo": "cat",
+    "desc": "Carteira de trabalho assinada"
+  },
+  {
+    "inicio": 268,
+    "largura": 1,
+    "nome": "V4049",
+    "tipo": "cat",
+    "desc": "Contribuinte de instit. d previd."
+  },
+  {
+    "inicio": 269,
+    "largura": 1,
+    "nome": "V4050",
+    "tipo": "cat",
+    "desc": "Rendimento habitual var. auxil."
+  },
+  {
+    "inicio": 270,
+    "largura": 1,
+    "nome": "V40501",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em dinheiro"
+  },
+  {
+    "inicio": 271,
+    "largura": 1,
+    "nome": "V405011",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 272,
+    "largura": 8,
+    "nome": "V405012",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em dinheiro"
+  },
+  {
+    "inicio": 280,
+    "largura": 1,
+    "nome": "V40502",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em produtos"
+  },
+  {
+    "inicio": 281,
+    "largura": 1,
+    "nome": "V405021",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 282,
+    "largura": 8,
+    "nome": "V405022",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em produtos"
+  },
+  {
+    "inicio": 290,
+    "largura": 1,
+    "nome": "V40503",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 291,
+    "largura": 1,
+    "nome": "V405031",
+    "tipo": "cat",
+    "desc": "Tipo rend. habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 292,
+    "largura": 1,
+    "nome": "V4051",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo var. auxil."
+  },
+  {
+    "inicio": 293,
+    "largura": 1,
+    "nome": "V40511",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em dinheiro"
+  },
+  {
+    "inicio": 294,
+    "largura": 1,
+    "nome": "V405111",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 295,
+    "largura": 8,
+    "nome": "V405112",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em dinheiro"
+  },
+  {
+    "inicio": 303,
+    "largura": 1,
+    "nome": "V40512",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em produtos"
+  },
+  {
+    "inicio": 304,
+    "largura": 1,
+    "nome": "V405121",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 305,
+    "largura": 8,
+    "nome": "V405122",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em produtos"
+  },
+  {
+    "inicio": 313,
+    "largura": 3,
+    "nome": "V4056",
+    "tipo": "num",
+    "desc": "Hrs habituais no trab. secun."
+  },
+  {
+    "inicio": 316,
+    "largura": 3,
+    "nome": "V4056C",
+    "tipo": "num",
+    "desc": "Hrs efetivas no trab. secun."
+  },
+  {
+    "inicio": 319,
+    "largura": 1,
+    "nome": "V4057",
+    "tipo": "cat",
+    "desc": "Contribuinte de instit. d previd."
+  },
+  {
+    "inicio": 320,
+    "largura": 1,
+    "nome": "V4058",
+    "tipo": "cat",
+    "desc": "Rendimento habitual var. auxil."
+  },
+  {
+    "inicio": 321,
+    "largura": 1,
+    "nome": "V40581",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em dinheiro"
+  },
+  {
+    "inicio": 322,
+    "largura": 1,
+    "nome": "V405811",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 323,
+    "largura": 8,
+    "nome": "V405812",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em dinheiro"
+  },
+  {
+    "inicio": 331,
+    "largura": 1,
+    "nome": "V40582",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em produtos"
+  },
+  {
+    "inicio": 332,
+    "largura": 1,
+    "nome": "V405821",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento hab."
+  },
+  {
+    "inicio": 333,
+    "largura": 8,
+    "nome": "V405822",
+    "tipo": "num",
+    "desc": "Valor do rend. hab. em produtos"
+  },
+  {
+    "inicio": 341,
+    "largura": 1,
+    "nome": "V40583",
+    "tipo": "cat",
+    "desc": "Rendimento habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 342,
+    "largura": 1,
+    "nome": "V405831",
+    "tipo": "cat",
+    "desc": "Tipo rend. habitual em benef\u00edcios"
+  },
+  {
+    "inicio": 343,
+    "largura": 1,
+    "nome": "V40584",
+    "tipo": "cat",
+    "desc": "N\u00e3o remunerado"
+  },
+  {
+    "inicio": 344,
+    "largura": 1,
+    "nome": "V4059",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo var. auxil."
+  },
+  {
+    "inicio": 345,
+    "largura": 1,
+    "nome": "V40591",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em dinheiro"
+  },
+  {
+    "inicio": 346,
+    "largura": 1,
+    "nome": "V405911",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 347,
+    "largura": 8,
+    "nome": "V405912",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em dinheiro"
+  },
+  {
+    "inicio": 355,
+    "largura": 1,
+    "nome": "V40592",
+    "tipo": "cat",
+    "desc": "Rendimento efetivo em produtos"
+  },
+  {
+    "inicio": 356,
+    "largura": 1,
+    "nome": "V405921",
+    "tipo": "cat",
+    "desc": "Faixa do valor do rendimento efe."
+  },
+  {
+    "inicio": 357,
+    "largura": 8,
+    "nome": "V405922",
+    "tipo": "num",
+    "desc": "Valor do rend. efe. em produtos"
+  },
+  {
+    "inicio": 365,
+    "largura": 3,
+    "nome": "V4062",
+    "tipo": "num",
+    "desc": "Hrs habituais no(s) outro(s) trab.*/"
+  },
+  {
+    "inicio": 368,
+    "largura": 3,
+    "nome": "V4062C",
+    "tipo": "num",
+    "desc": "Hrs efetivas no(s) outro(s) trab .*/"
+  },
+  {
+    "inicio": 371,
+    "largura": 1,
+    "nome": "V4063",
+    "tipo": "cat",
+    "desc": "Gostaria trabalhar + hrs efetivas"
+  },
+  {
+    "inicio": 372,
+    "largura": 1,
+    "nome": "V4063A",
+    "tipo": "cat",
+    "desc": "Gostaria trabalhar + hrs habituais*/"
+  },
+  {
+    "inicio": 373,
+    "largura": 1,
+    "nome": "V4064",
+    "tipo": "cat",
+    "desc": "Dispon. trabalhar + hrs efetivas"
+  },
+  {
+    "inicio": 374,
+    "largura": 1,
+    "nome": "V4064A",
+    "tipo": "cat",
+    "desc": "Dispon. trabalhar + hrs habituais"
+  },
+  {
+    "inicio": 375,
+    "largura": 1,
+    "nome": "V4071",
+    "tipo": "cat",
+    "desc": "Provid\u00eancia p/ conseg. trab.(30d)"
+  },
+  {
+    "inicio": 376,
+    "largura": 2,
+    "nome": "V4072",
+    "tipo": "cat",
+    "desc": "Principal provid. p/conseg. trab."
+  },
+  {
+    "inicio": 378,
+    "largura": 1,
+    "nome": "V4072A",
+    "tipo": "cat",
+    "desc": "Principal provid. p/conseg. trab."
+  },
+  {
+    "inicio": 379,
+    "largura": 1,
+    "nome": "V4073",
+    "tipo": "cat",
+    "desc": "Gostaria de ter trabalhado"
+  },
+  {
+    "inicio": 380,
+    "largura": 1,
+    "nome": "V4074",
+    "tipo": "cat",
+    "desc": "Motivo de n\u00e3o ter tomado provid."
+  },
+  {
+    "inicio": 381,
+    "largura": 2,
+    "nome": "V4074A",
+    "tipo": "cat",
+    "desc": "Motivo de n\u00e3o ter tomado provid."
+  },
+  {
+    "inicio": 383,
+    "largura": 1,
+    "nome": "V4075A",
+    "tipo": "cat",
+    "desc": "Tempo em que ir\u00e1 come\u00e7ar o trab."
+  },
+  {
+    "inicio": 384,
+    "largura": 2,
+    "nome": "V4075A1",
+    "tipo": "cat",
+    "desc": "Meses em que ir\u00e1 come\u00e7ar o trab."
+  },
+  {
+    "inicio": 386,
+    "largura": 1,
+    "nome": "V4076",
+    "tipo": "cat",
+    "desc": "Tempo tentando conseguir trabalho"
+  },
+  {
+    "inicio": 387,
+    "largura": 2,
+    "nome": "V40761",
+    "tipo": "num",
+    "desc": "Tempo tentando trab. 1 mes-1 ano"
+  },
+  {
+    "inicio": 389,
+    "largura": 2,
+    "nome": "V40762",
+    "tipo": "num",
+    "desc": "Tempo tentando trab. 1 ano-2 anos"
+  },
+  {
+    "inicio": 391,
+    "largura": 2,
+    "nome": "V40763",
+    "tipo": "num",
+    "desc": "Tempo tentando trab. + de 2 anos"
+  },
+  {
+    "inicio": 393,
+    "largura": 1,
+    "nome": "V4077",
+    "tipo": "cat",
+    "desc": "Poderia ter come\u00e7ado a trabalhar"
+  },
+  {
+    "inicio": 394,
+    "largura": 1,
+    "nome": "V4078",
+    "tipo": "cat",
+    "desc": "Motivo p/\u00f1 querer/come\u00e7ar a trab."
+  },
+  {
+    "inicio": 395,
+    "largura": 1,
+    "nome": "V4078A",
+    "tipo": "cat",
+    "desc": "Motivo p /\u00f1 querer/come\u00e7ar a trab."
+  },
+  {
+    "inicio": 396,
+    "largura": 1,
+    "nome": "V4082",
+    "tipo": "cat",
+    "desc": "Trab por pelo menos 1 hora em 1 ano*/"
+  },
+  {
+    "inicio": 397,
+    "largura": 2,
+    "nome": "VD2002",
+    "tipo": "cat",
+    "desc": "Condi\u00e7\u00e3o no domic\u00edlio"
+  },
+  {
+    "inicio": 399,
+    "largura": 2,
+    "nome": "VD2003",
+    "tipo": "num",
+    "desc": "N\u00famero de componentes do domic."
+  },
+  {
+    "inicio": 401,
+    "largura": 1,
+    "nome": "VD2004",
+    "tipo": "cat",
+    "desc": "Esp\u00e9cie da unidade dom\u00e9stica*/"
+  },
+  {
+    "inicio": 402,
+    "largura": 2,
+    "nome": "VD2006",
+    "tipo": "cat",
+    "desc": "Faixas et\u00e1rias utilizadas no processo de calibra\u00e7\u00e3o"
+  },
+  {
+    "inicio": 404,
+    "largura": 1,
+    "nome": "VD3004",
+    "tipo": "cat",
+    "desc": "N\u00edvel de instru\u00e7\u00e3o mais elevado alcan\u00e7ado (5 anos ou mais de idade)"
+  },
+  {
+    "inicio": 405,
+    "largura": 2,
+    "nome": "VD3005",
+    "tipo": "cat",
+    "desc": "Anos de estudo (5 anos ou mais de idade) para fundamental de 9 anos"
+  },
+  {
+    "inicio": 407,
+    "largura": 1,
+    "nome": "VD3006",
+    "tipo": "cat",
+    "desc": "Grupamento de anos de estudo (pessoas de 5 anos ou mais de idade) para fundamental de 9 anos"
+  },
+  {
+    "inicio": 408,
+    "largura": 1,
+    "nome": "VD4001",
+    "tipo": "cat",
+    "desc": "Condi\u00e7\u00e3o em rela\u00e7\u00e3o for\u00e7a d trab."
+  },
+  {
+    "inicio": 409,
+    "largura": 1,
+    "nome": "VD4002",
+    "tipo": "cat",
+    "desc": "Condi\u00e7\u00e3o de ocupa\u00e7\u00e3o"
+  },
+  {
+    "inicio": 410,
+    "largura": 1,
+    "nome": "VD4003",
+    "tipo": "cat",
+    "desc": "For\u00e7a de trabalho potencial"
+  },
+  {
+    "inicio": 411,
+    "largura": 1,
+    "nome": "VD4004",
+    "tipo": "cat",
+    "desc": "Subocupa\u00e7\u00e3o por insufici\u00ean. de hrs efet*/"
+  },
+  {
+    "inicio": 412,
+    "largura": 1,
+    "nome": "VD4004A",
+    "tipo": "cat",
+    "desc": "Subocupa\u00e7\u00e3o por insufici\u00ean. de hrs hab*/"
+  },
+  {
+    "inicio": 413,
+    "largura": 1,
+    "nome": "VD4005",
+    "tipo": "cat",
+    "desc": "Pessoas desalentadas"
+  },
+  {
+    "inicio": 414,
+    "largura": 1,
+    "nome": "VD4007",
+    "tipo": "cat",
+    "desc": "Posi\u00e7\u00e3o na ocupa\u00e7\u00e3o trab. princ."
+  },
+  {
+    "inicio": 415,
+    "largura": 1,
+    "nome": "VD4008",
+    "tipo": "cat",
+    "desc": "Posi\u00e7\u00e3o na ocupa\u00e7\u00e3o trab. princ."
+  },
+  {
+    "inicio": 416,
+    "largura": 2,
+    "nome": "VD4009",
+    "tipo": "cat",
+    "desc": "Posi\u00e7\u00e3o na ocupa\u00e7\u00e3o trab. princ."
+  },
+  {
+    "inicio": 418,
+    "largura": 2,
+    "nome": "VD4010",
+    "tipo": "cat",
+    "desc": "Grupamen. d ativid. trab. princ."
+  },
+  {
+    "inicio": 420,
+    "largura": 2,
+    "nome": "VD4011",
+    "tipo": "cat",
+    "desc": "Grupamen. ocupacion. trab. Princ."
+  },
+  {
+    "inicio": 422,
+    "largura": 1,
+    "nome": "VD4012",
+    "tipo": "cat",
+    "desc": "Contrib. instit. previd. qq trab."
+  },
+  {
+    "inicio": 423,
+    "largura": 1,
+    "nome": "VD4013",
+    "tipo": "cat",
+    "desc": "Faixa hrs habituais em todos trab."
+  },
+  {
+    "inicio": 424,
+    "largura": 1,
+    "nome": "VD4014",
+    "tipo": "cat",
+    "desc": "Faixa hrs efetivas em todos trab."
+  },
+  {
+    "inicio": 425,
+    "largura": 1,
+    "nome": "VD4015",
+    "tipo": "cat",
+    "desc": "Tipo d remunera\u00e7\u00e3o trab. princ."
+  },
+  {
+    "inicio": 426,
+    "largura": 8,
+    "nome": "VD4016",
+    "tipo": "num",
+    "desc": "Rendim. habitual trab. princ."
+  },
+  {
+    "inicio": 434,
+    "largura": 8,
+    "nome": "VD4017",
+    "tipo": "num",
+    "desc": "Rendim. efetivo trab. princ."
+  },
+  {
+    "inicio": 442,
+    "largura": 1,
+    "nome": "VD4018",
+    "tipo": "cat",
+    "desc": "Tipo d remunera\u00e7\u00e3o em qq trabalho"
+  },
+  {
+    "inicio": 443,
+    "largura": 8,
+    "nome": "VD4019",
+    "tipo": "num",
+    "desc": "Rendim. habitual qq trabalho"
+  },
+  {
+    "inicio": 451,
+    "largura": 8,
+    "nome": "VD4020",
+    "tipo": "num",
+    "desc": "Rendim. efetivo qq trabalho"
+  },
+  {
+    "inicio": 459,
+    "largura": 1,
+    "nome": "VD4023",
+    "tipo": "cat",
+    "desc": "Pq \u00f1 proc./\u00f1 gost./\u00f1 disp.p/trab."
+  },
+  {
+    "inicio": 460,
+    "largura": 1,
+    "nome": "VD4030",
+    "tipo": "cat",
+    "desc": "Pq \u00f1 proc./\u00f1 gost./\u00f1 disp.p/trab."
+  },
+  {
+    "inicio": 461,
+    "largura": 3,
+    "nome": "VD4031",
+    "tipo": "num",
+    "desc": "Hrs habituais em todos trab."
+  },
+  {
+    "inicio": 464,
+    "largura": 3,
+    "nome": "VD4032",
+    "tipo": "num",
+    "desc": "Hrs efetivas no trab. princ."
+  },
+  {
+    "inicio": 467,
+    "largura": 3,
+    "nome": "VD4033",
+    "tipo": "num",
+    "desc": "Hrs efetivas no trab. secun."
+  },
+  {
+    "inicio": 470,
+    "largura": 3,
+    "nome": "VD4034",
+    "tipo": "num",
+    "desc": "Hrs efetivas no(s) outro(s) trab .*/"
+  },
+  {
+    "inicio": 473,
+    "largura": 3,
+    "nome": "VD4035",
+    "tipo": "num",
+    "desc": "Hrs efetivas em todos trab."
+  },
+  {
+    "inicio": 476,
+    "largura": 1,
+    "nome": "VD4036",
+    "tipo": "cat",
+    "desc": "Faixa hrs habituais trab. princ."
+  },
+  {
+    "inicio": 477,
+    "largura": 1,
+    "nome": "VD4037",
+    "tipo": "cat",
+    "desc": "Faixa hrs efetivas trab. princ."
+  },
+  {
+    "inicio": 478,
+    "largura": 15,
+    "nome": "V1028001",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 1"
+  },
+  {
+    "inicio": 493,
+    "largura": 15,
+    "nome": "V1028002",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 2"
+  },
+  {
+    "inicio": 508,
+    "largura": 15,
+    "nome": "V1028003",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 3"
+  },
+  {
+    "inicio": 523,
+    "largura": 15,
+    "nome": "V1028004",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 4"
+  },
+  {
+    "inicio": 538,
+    "largura": 15,
+    "nome": "V1028005",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 5"
+  },
+  {
+    "inicio": 553,
+    "largura": 15,
+    "nome": "V1028006",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 6"
+  },
+  {
+    "inicio": 568,
+    "largura": 15,
+    "nome": "V1028007",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 7"
+  },
+  {
+    "inicio": 583,
+    "largura": 15,
+    "nome": "V1028008",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 8"
+  },
+  {
+    "inicio": 598,
+    "largura": 15,
+    "nome": "V1028009",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 9"
+  },
+  {
+    "inicio": 613,
+    "largura": 15,
+    "nome": "V1028010",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 10"
+  },
+  {
+    "inicio": 628,
+    "largura": 15,
+    "nome": "V1028011",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 11"
+  },
+  {
+    "inicio": 643,
+    "largura": 15,
+    "nome": "V1028012",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 12"
+  },
+  {
+    "inicio": 658,
+    "largura": 15,
+    "nome": "V1028013",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 13"
+  },
+  {
+    "inicio": 673,
+    "largura": 15,
+    "nome": "V1028014",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 14"
+  },
+  {
+    "inicio": 688,
+    "largura": 15,
+    "nome": "V1028015",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 15"
+  },
+  {
+    "inicio": 703,
+    "largura": 15,
+    "nome": "V1028016",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 16"
+  },
+  {
+    "inicio": 718,
+    "largura": 15,
+    "nome": "V1028017",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 17"
+  },
+  {
+    "inicio": 733,
+    "largura": 15,
+    "nome": "V1028018",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 18"
+  },
+  {
+    "inicio": 748,
+    "largura": 15,
+    "nome": "V1028019",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 19"
+  },
+  {
+    "inicio": 763,
+    "largura": 15,
+    "nome": "V1028020",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 20"
+  },
+  {
+    "inicio": 778,
+    "largura": 15,
+    "nome": "V1028021",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 21"
+  },
+  {
+    "inicio": 793,
+    "largura": 15,
+    "nome": "V1028022",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 22"
+  },
+  {
+    "inicio": 808,
+    "largura": 15,
+    "nome": "V1028023",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 23"
+  },
+  {
+    "inicio": 823,
+    "largura": 15,
+    "nome": "V1028024",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 24"
+  },
+  {
+    "inicio": 838,
+    "largura": 15,
+    "nome": "V1028025",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 25"
+  },
+  {
+    "inicio": 853,
+    "largura": 15,
+    "nome": "V1028026",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 26"
+  },
+  {
+    "inicio": 868,
+    "largura": 15,
+    "nome": "V1028027",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 27"
+  },
+  {
+    "inicio": 883,
+    "largura": 15,
+    "nome": "V1028028",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 28"
+  },
+  {
+    "inicio": 898,
+    "largura": 15,
+    "nome": "V1028029",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 29"
+  },
+  {
+    "inicio": 913,
+    "largura": 15,
+    "nome": "V1028030",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 30"
+  },
+  {
+    "inicio": 928,
+    "largura": 15,
+    "nome": "V1028031",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 31"
+  },
+  {
+    "inicio": 943,
+    "largura": 15,
+    "nome": "V1028032",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 32"
+  },
+  {
+    "inicio": 958,
+    "largura": 15,
+    "nome": "V1028033",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 33"
+  },
+  {
+    "inicio": 973,
+    "largura": 15,
+    "nome": "V1028034",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 34"
+  },
+  {
+    "inicio": 988,
+    "largura": 15,
+    "nome": "V1028035",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 35"
+  },
+  {
+    "inicio": 1003,
+    "largura": 15,
+    "nome": "V1028036",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 36"
+  },
+  {
+    "inicio": 1018,
+    "largura": 15,
+    "nome": "V1028037",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 37"
+  },
+  {
+    "inicio": 1033,
+    "largura": 15,
+    "nome": "V1028038",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 38"
+  },
+  {
+    "inicio": 1048,
+    "largura": 15,
+    "nome": "V1028039",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 39"
+  },
+  {
+    "inicio": 1063,
+    "largura": 15,
+    "nome": "V1028040",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 40"
+  },
+  {
+    "inicio": 1078,
+    "largura": 15,
+    "nome": "V1028041",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 41"
+  },
+  {
+    "inicio": 1093,
+    "largura": 15,
+    "nome": "V1028042",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 42"
+  },
+  {
+    "inicio": 1108,
+    "largura": 15,
+    "nome": "V1028043",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 43"
+  },
+  {
+    "inicio": 1123,
+    "largura": 15,
+    "nome": "V1028044",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 44"
+  },
+  {
+    "inicio": 1138,
+    "largura": 15,
+    "nome": "V1028045",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 45"
+  },
+  {
+    "inicio": 1153,
+    "largura": 15,
+    "nome": "V1028046",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 46"
+  },
+  {
+    "inicio": 1168,
+    "largura": 15,
+    "nome": "V1028047",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 47"
+  },
+  {
+    "inicio": 1183,
+    "largura": 15,
+    "nome": "V1028048",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 48"
+  },
+  {
+    "inicio": 1198,
+    "largura": 15,
+    "nome": "V1028049",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 49"
+  },
+  {
+    "inicio": 1213,
+    "largura": 15,
+    "nome": "V1028050",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 50"
+  },
+  {
+    "inicio": 1228,
+    "largura": 15,
+    "nome": "V1028051",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 51"
+  },
+  {
+    "inicio": 1243,
+    "largura": 15,
+    "nome": "V1028052",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 52"
+  },
+  {
+    "inicio": 1258,
+    "largura": 15,
+    "nome": "V1028053",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 53"
+  },
+  {
+    "inicio": 1273,
+    "largura": 15,
+    "nome": "V1028054",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 54"
+  },
+  {
+    "inicio": 1288,
+    "largura": 15,
+    "nome": "V1028055",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 55"
+  },
+  {
+    "inicio": 1303,
+    "largura": 15,
+    "nome": "V1028056",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 56"
+  },
+  {
+    "inicio": 1318,
+    "largura": 15,
+    "nome": "V1028057",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 57"
+  },
+  {
+    "inicio": 1333,
+    "largura": 15,
+    "nome": "V1028058",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 58"
+  },
+  {
+    "inicio": 1348,
+    "largura": 15,
+    "nome": "V1028059",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 59"
+  },
+  {
+    "inicio": 1363,
+    "largura": 15,
+    "nome": "V1028060",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 60"
+  },
+  {
+    "inicio": 1378,
+    "largura": 15,
+    "nome": "V1028061",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 61"
+  },
+  {
+    "inicio": 1393,
+    "largura": 15,
+    "nome": "V1028062",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 62"
+  },
+  {
+    "inicio": 1408,
+    "largura": 15,
+    "nome": "V1028063",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 63"
+  },
+  {
+    "inicio": 1423,
+    "largura": 15,
+    "nome": "V1028064",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 64"
+  },
+  {
+    "inicio": 1438,
+    "largura": 15,
+    "nome": "V1028065",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 65"
+  },
+  {
+    "inicio": 1453,
+    "largura": 15,
+    "nome": "V1028066",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 66"
+  },
+  {
+    "inicio": 1468,
+    "largura": 15,
+    "nome": "V1028067",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 67"
+  },
+  {
+    "inicio": 1483,
+    "largura": 15,
+    "nome": "V1028068",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 68"
+  },
+  {
+    "inicio": 1498,
+    "largura": 15,
+    "nome": "V1028069",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 69"
+  },
+  {
+    "inicio": 1513,
+    "largura": 15,
+    "nome": "V1028070",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 70"
+  },
+  {
+    "inicio": 1528,
+    "largura": 15,
+    "nome": "V1028071",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 71"
+  },
+  {
+    "inicio": 1543,
+    "largura": 15,
+    "nome": "V1028072",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 72"
+  },
+  {
+    "inicio": 1558,
+    "largura": 15,
+    "nome": "V1028073",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 73"
+  },
+  {
+    "inicio": 1573,
+    "largura": 15,
+    "nome": "V1028074",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 74"
+  },
+  {
+    "inicio": 1588,
+    "largura": 15,
+    "nome": "V1028075",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 75"
+  },
+  {
+    "inicio": 1603,
+    "largura": 15,
+    "nome": "V1028076",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 76"
+  },
+  {
+    "inicio": 1618,
+    "largura": 15,
+    "nome": "V1028077",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 77"
+  },
+  {
+    "inicio": 1633,
+    "largura": 15,
+    "nome": "V1028078",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 78"
+  },
+  {
+    "inicio": 1648,
+    "largura": 15,
+    "nome": "V1028079",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 79"
+  },
+  {
+    "inicio": 1663,
+    "largura": 15,
+    "nome": "V1028080",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 80"
+  },
+  {
+    "inicio": 1678,
+    "largura": 15,
+    "nome": "V1028081",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 81"
+  },
+  {
+    "inicio": 1693,
+    "largura": 15,
+    "nome": "V1028082",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 82"
+  },
+  {
+    "inicio": 1708,
+    "largura": 15,
+    "nome": "V1028083",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 83"
+  },
+  {
+    "inicio": 1723,
+    "largura": 15,
+    "nome": "V1028084",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 84"
+  },
+  {
+    "inicio": 1738,
+    "largura": 15,
+    "nome": "V1028085",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 85"
+  },
+  {
+    "inicio": 1753,
+    "largura": 15,
+    "nome": "V1028086",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 86"
+  },
+  {
+    "inicio": 1768,
+    "largura": 15,
+    "nome": "V1028087",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 87"
+  },
+  {
+    "inicio": 1783,
+    "largura": 15,
+    "nome": "V1028088",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 88"
+  },
+  {
+    "inicio": 1798,
+    "largura": 15,
+    "nome": "V1028089",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 89"
+  },
+  {
+    "inicio": 1813,
+    "largura": 15,
+    "nome": "V1028090",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 90"
+  },
+  {
+    "inicio": 1828,
+    "largura": 15,
+    "nome": "V1028091",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 91"
+  },
+  {
+    "inicio": 1843,
+    "largura": 15,
+    "nome": "V1028092",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 92"
+  },
+  {
+    "inicio": 1858,
+    "largura": 15,
+    "nome": "V1028093",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 93"
+  },
+  {
+    "inicio": 1873,
+    "largura": 15,
+    "nome": "V1028094",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 94"
+  },
+  {
+    "inicio": 1888,
+    "largura": 15,
+    "nome": "V1028095",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 95"
+  },
+  {
+    "inicio": 1903,
+    "largura": 15,
+    "nome": "V1028096",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 96"
+  },
+  {
+    "inicio": 1918,
+    "largura": 15,
+    "nome": "V1028097",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 97"
+  },
+  {
+    "inicio": 1933,
+    "largura": 15,
+    "nome": "V1028098",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 98"
+  },
+  {
+    "inicio": 1948,
+    "largura": 15,
+    "nome": "V1028099",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 99"
+  },
+  {
+    "inicio": 1963,
+    "largura": 15,
+    "nome": "V1028100",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 100"
+  },
+  {
+    "inicio": 1978,
+    "largura": 15,
+    "nome": "V1028101",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 101"
+  },
+  {
+    "inicio": 1993,
+    "largura": 15,
+    "nome": "V1028102",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 102"
+  },
+  {
+    "inicio": 2008,
+    "largura": 15,
+    "nome": "V1028103",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 103"
+  },
+  {
+    "inicio": 2023,
+    "largura": 15,
+    "nome": "V1028104",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 104"
+  },
+  {
+    "inicio": 2038,
+    "largura": 15,
+    "nome": "V1028105",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 105"
+  },
+  {
+    "inicio": 2053,
+    "largura": 15,
+    "nome": "V1028106",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 106"
+  },
+  {
+    "inicio": 2068,
+    "largura": 15,
+    "nome": "V1028107",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 107"
+  },
+  {
+    "inicio": 2083,
+    "largura": 15,
+    "nome": "V1028108",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 108"
+  },
+  {
+    "inicio": 2098,
+    "largura": 15,
+    "nome": "V1028109",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 109"
+  },
+  {
+    "inicio": 2113,
+    "largura": 15,
+    "nome": "V1028110",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 110"
+  },
+  {
+    "inicio": 2128,
+    "largura": 15,
+    "nome": "V1028111",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 111"
+  },
+  {
+    "inicio": 2143,
+    "largura": 15,
+    "nome": "V1028112",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 112"
+  },
+  {
+    "inicio": 2158,
+    "largura": 15,
+    "nome": "V1028113",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 113"
+  },
+  {
+    "inicio": 2173,
+    "largura": 15,
+    "nome": "V1028114",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 114"
+  },
+  {
+    "inicio": 2188,
+    "largura": 15,
+    "nome": "V1028115",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 115"
+  },
+  {
+    "inicio": 2203,
+    "largura": 15,
+    "nome": "V1028116",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 116"
+  },
+  {
+    "inicio": 2218,
+    "largura": 15,
+    "nome": "V1028117",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 117"
+  },
+  {
+    "inicio": 2233,
+    "largura": 15,
+    "nome": "V1028118",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 118"
+  },
+  {
+    "inicio": 2248,
+    "largura": 15,
+    "nome": "V1028119",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 119"
+  },
+  {
+    "inicio": 2263,
+    "largura": 15,
+    "nome": "V1028120",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 120"
+  },
+  {
+    "inicio": 2278,
+    "largura": 15,
+    "nome": "V1028121",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 121"
+  },
+  {
+    "inicio": 2293,
+    "largura": 15,
+    "nome": "V1028122",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 122"
+  },
+  {
+    "inicio": 2308,
+    "largura": 15,
+    "nome": "V1028123",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 123"
+  },
+  {
+    "inicio": 2323,
+    "largura": 15,
+    "nome": "V1028124",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 124"
+  },
+  {
+    "inicio": 2338,
+    "largura": 15,
+    "nome": "V1028125",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 125"
+  },
+  {
+    "inicio": 2353,
+    "largura": 15,
+    "nome": "V1028126",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 126"
+  },
+  {
+    "inicio": 2368,
+    "largura": 15,
+    "nome": "V1028127",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 127"
+  },
+  {
+    "inicio": 2383,
+    "largura": 15,
+    "nome": "V1028128",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 128"
+  },
+  {
+    "inicio": 2398,
+    "largura": 15,
+    "nome": "V1028129",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 129"
+  },
+  {
+    "inicio": 2413,
+    "largura": 15,
+    "nome": "V1028130",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 130"
+  },
+  {
+    "inicio": 2428,
+    "largura": 15,
+    "nome": "V1028131",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 131"
+  },
+  {
+    "inicio": 2443,
+    "largura": 15,
+    "nome": "V1028132",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 132"
+  },
+  {
+    "inicio": 2458,
+    "largura": 15,
+    "nome": "V1028133",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 133"
+  },
+  {
+    "inicio": 2473,
+    "largura": 15,
+    "nome": "V1028134",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 134"
+  },
+  {
+    "inicio": 2488,
+    "largura": 15,
+    "nome": "V1028135",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 135"
+  },
+  {
+    "inicio": 2503,
+    "largura": 15,
+    "nome": "V1028136",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 136"
+  },
+  {
+    "inicio": 2518,
+    "largura": 15,
+    "nome": "V1028137",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 137"
+  },
+  {
+    "inicio": 2533,
+    "largura": 15,
+    "nome": "V1028138",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 138"
+  },
+  {
+    "inicio": 2548,
+    "largura": 15,
+    "nome": "V1028139",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 139"
+  },
+  {
+    "inicio": 2563,
+    "largura": 15,
+    "nome": "V1028140",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 140"
+  },
+  {
+    "inicio": 2578,
+    "largura": 15,
+    "nome": "V1028141",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 141"
+  },
+  {
+    "inicio": 2593,
+    "largura": 15,
+    "nome": "V1028142",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 142"
+  },
+  {
+    "inicio": 2608,
+    "largura": 15,
+    "nome": "V1028143",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 143"
+  },
+  {
+    "inicio": 2623,
+    "largura": 15,
+    "nome": "V1028144",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 144"
+  },
+  {
+    "inicio": 2638,
+    "largura": 15,
+    "nome": "V1028145",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 145"
+  },
+  {
+    "inicio": 2653,
+    "largura": 15,
+    "nome": "V1028146",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 146"
+  },
+  {
+    "inicio": 2668,
+    "largura": 15,
+    "nome": "V1028147",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 147"
+  },
+  {
+    "inicio": 2683,
+    "largura": 15,
+    "nome": "V1028148",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 148"
+  },
+  {
+    "inicio": 2698,
+    "largura": 15,
+    "nome": "V1028149",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 149"
+  },
+  {
+    "inicio": 2713,
+    "largura": 15,
+    "nome": "V1028150",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 150"
+  },
+  {
+    "inicio": 2728,
+    "largura": 15,
+    "nome": "V1028151",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 151"
+  },
+  {
+    "inicio": 2743,
+    "largura": 15,
+    "nome": "V1028152",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 152"
+  },
+  {
+    "inicio": 2758,
+    "largura": 15,
+    "nome": "V1028153",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 153"
+  },
+  {
+    "inicio": 2773,
+    "largura": 15,
+    "nome": "V1028154",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 154"
+  },
+  {
+    "inicio": 2788,
+    "largura": 15,
+    "nome": "V1028155",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 155"
+  },
+  {
+    "inicio": 2803,
+    "largura": 15,
+    "nome": "V1028156",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 156"
+  },
+  {
+    "inicio": 2818,
+    "largura": 15,
+    "nome": "V1028157",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 157"
+  },
+  {
+    "inicio": 2833,
+    "largura": 15,
+    "nome": "V1028158",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 158"
+  },
+  {
+    "inicio": 2848,
+    "largura": 15,
+    "nome": "V1028159",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 159"
+  },
+  {
+    "inicio": 2863,
+    "largura": 15,
+    "nome": "V1028160",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 160"
+  },
+  {
+    "inicio": 2878,
+    "largura": 15,
+    "nome": "V1028161",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 161"
+  },
+  {
+    "inicio": 2893,
+    "largura": 15,
+    "nome": "V1028162",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 162"
+  },
+  {
+    "inicio": 2908,
+    "largura": 15,
+    "nome": "V1028163",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 163"
+  },
+  {
+    "inicio": 2923,
+    "largura": 15,
+    "nome": "V1028164",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 164"
+  },
+  {
+    "inicio": 2938,
+    "largura": 15,
+    "nome": "V1028165",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 165"
+  },
+  {
+    "inicio": 2953,
+    "largura": 15,
+    "nome": "V1028166",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 166"
+  },
+  {
+    "inicio": 2968,
+    "largura": 15,
+    "nome": "V1028167",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 167"
+  },
+  {
+    "inicio": 2983,
+    "largura": 15,
+    "nome": "V1028168",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 168"
+  },
+  {
+    "inicio": 2998,
+    "largura": 15,
+    "nome": "V1028169",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 169"
+  },
+  {
+    "inicio": 3013,
+    "largura": 15,
+    "nome": "V1028170",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 170"
+  },
+  {
+    "inicio": 3028,
+    "largura": 15,
+    "nome": "V1028171",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 171"
+  },
+  {
+    "inicio": 3043,
+    "largura": 15,
+    "nome": "V1028172",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 172"
+  },
+  {
+    "inicio": 3058,
+    "largura": 15,
+    "nome": "V1028173",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 173"
+  },
+  {
+    "inicio": 3073,
+    "largura": 15,
+    "nome": "V1028174",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 174"
+  },
+  {
+    "inicio": 3088,
+    "largura": 15,
+    "nome": "V1028175",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 175"
+  },
+  {
+    "inicio": 3103,
+    "largura": 15,
+    "nome": "V1028176",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 176"
+  },
+  {
+    "inicio": 3118,
+    "largura": 15,
+    "nome": "V1028177",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 177"
+  },
+  {
+    "inicio": 3133,
+    "largura": 15,
+    "nome": "V1028178",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 178"
+  },
+  {
+    "inicio": 3148,
+    "largura": 15,
+    "nome": "V1028179",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 179"
+  },
+  {
+    "inicio": 3163,
+    "largura": 15,
+    "nome": "V1028180",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 180"
+  },
+  {
+    "inicio": 3178,
+    "largura": 15,
+    "nome": "V1028181",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 181"
+  },
+  {
+    "inicio": 3193,
+    "largura": 15,
+    "nome": "V1028182",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 182"
+  },
+  {
+    "inicio": 3208,
+    "largura": 15,
+    "nome": "V1028183",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 183"
+  },
+  {
+    "inicio": 3223,
+    "largura": 15,
+    "nome": "V1028184",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 184"
+  },
+  {
+    "inicio": 3238,
+    "largura": 15,
+    "nome": "V1028185",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 185"
+  },
+  {
+    "inicio": 3253,
+    "largura": 15,
+    "nome": "V1028186",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 186"
+  },
+  {
+    "inicio": 3268,
+    "largura": 15,
+    "nome": "V1028187",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 187"
+  },
+  {
+    "inicio": 3283,
+    "largura": 15,
+    "nome": "V1028188",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 188"
+  },
+  {
+    "inicio": 3298,
+    "largura": 15,
+    "nome": "V1028189",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 189"
+  },
+  {
+    "inicio": 3313,
+    "largura": 15,
+    "nome": "V1028190",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 190"
+  },
+  {
+    "inicio": 3328,
+    "largura": 15,
+    "nome": "V1028191",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 191"
+  },
+  {
+    "inicio": 3343,
+    "largura": 15,
+    "nome": "V1028192",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 192"
+  },
+  {
+    "inicio": 3358,
+    "largura": 15,
+    "nome": "V1028193",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 193"
+  },
+  {
+    "inicio": 3373,
+    "largura": 15,
+    "nome": "V1028194",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 194"
+  },
+  {
+    "inicio": 3388,
+    "largura": 15,
+    "nome": "V1028195",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 195"
+  },
+  {
+    "inicio": 3403,
+    "largura": 15,
+    "nome": "V1028196",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 196"
+  },
+  {
+    "inicio": 3418,
+    "largura": 15,
+    "nome": "V1028197",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 197"
+  },
+  {
+    "inicio": 3433,
+    "largura": 15,
+    "nome": "V1028198",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 198"
+  },
+  {
+    "inicio": 3448,
+    "largura": 15,
+    "nome": "V1028199",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 199"
+  },
+  {
+    "inicio": 3463,
+    "largura": 15,
+    "nome": "V1028200",
+    "tipo": "num",
+    "desc": "Peso REPLICADO 200"
+  }
+]
