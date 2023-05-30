@@ -7,7 +7,6 @@ __license__ = "New BSD License"
 
 
 import os
-import os.path as op
 from pathlib import Path
 from ftplib import FTP
 import zipfile
@@ -23,7 +22,7 @@ import pandas as pd
 # passo 1: criar diretório local para receber os dados
 # ====================================================
 
-home = op.expanduser('~')
+home = os.path.expanduser('~')
 destino = home + "/dados/PNADc/"
 Path(destino).mkdir(parents=True, exist_ok=True)
 temp = destino + "temp/"
