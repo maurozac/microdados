@@ -1,10 +1,9 @@
 """Baixa e estrutura microdados da PNAD Contínua em dataframes."""
 
 __version__ = "1.0"
-__author__ = "Mauro Zackiewicz"   # codigo
+__author__ = "Mauro Zackiewicz" 
 __email__ = "maurozac@gmail.com"
 __license__ = "New BSD License"
-
 
 import os
 from pathlib import Path
