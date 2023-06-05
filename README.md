@@ -1,2 +1,2 @@
 # microdados
-Captura e tratamento de bases de dados brasileiras
+Acesso e tratamento de microdados públicos do Brasil
