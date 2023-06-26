@@ -107,6 +107,6 @@ for cod in aeros:
 df = pd.DataFrame(dfc, index=aeros, columns=['nome', 'município', 'uf'])
 
 final = pd.concat([total, df], axis=1)
-final.index.name = '2020'
+final.index.name = ano
 
 final.to_csv('movimento'+ano+'.csv')
